@@ -102,6 +102,14 @@ Then, you will want to visit `http://<ip>:<port>` which is the external IP and t
 
 Clicking the green check next to the nginx-example-page in the packages panel will uninstall it for you, after a confirmation.
 
+### Reviewing System Statistics
+
+The Systems Stats Dashboard is a comprehensive panel that can be customized. A default is installed and you can play with the viewing options such as timespan and how often refresh, etc.
+
+The dashboard is locked from being edited and is customized through external means. I want to make it so that you can drop in your own dashboards, but make it hard enough so that people can't have unhappy accidents while playing with it.
+
+It is also available at <http://trunk.local:3030>.
+
 ### Other things you can do
 
 There are a number of things in the UI I think would be worth going into, but I kind of want to leave it here and see how well you do from there. If it's hard to use, I'd love to hear about it. Please! I don't want to give you instructions to ensure this feedback is as pure as possible.
