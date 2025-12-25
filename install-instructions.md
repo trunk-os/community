@@ -8,10 +8,6 @@ Reach out if you're having trouble; I can help you and it helps me learn where t
 
 First, install [VirtualBox](https://virtualbox.org) if you have not already. This will allow you to import the OVA, which you will download in a minute. You may need to reboot after you install it.
 
-### If this is your first time using VirtualBox
-
-If you have not before, you will need to reboot to BIOS and enable either SVM support on AMD CPUs or VT-X on Intel. This is so you can run virtual machines on your hardware. It is not needed for Apple and note that not all PCs (Laptops especially) support the feature. Contact me if you're in this situation. There are solutions, they just aren't here yet; it's a priority thing. Raise your voice.
-
 ## Download the Image
 
 Go [here](https://drive.google.com/file/d/1xw9scBbmD2KpALgtcjAHht8njd3P5LHx/view?usp=drive_link) to download the OVA, which is a full VM application complete with proper disk, network, etc setup.
@@ -43,6 +39,20 @@ This is the default for this configuration: they are the minimum recommended thr
 
 - Do not enable secure boot. It will yield a malfunctioning system.
 - If you want to dig deeper into how things are put together, you can ssh in as `root@trunk.local`. The password is `trunkrules`. Note, you cannot modify the vast majority of the filesystem, including most configuration and nearly all of the binaries installed. If you want help trying to do something different in this regard, reach out.
+
+## Start the VM
+
+Press the Start button, near the top in the Machines panel for Trunk. If you have trouble starting:
+
+### If this is your first time using VirtualBox
+
+If you have not before, you will need to reboot to BIOS and enable either SVM support on AMD CPUs or VT-X on Intel. This is so you can run virtual machines on your hardware. It is not needed for Apple and note that not all PCs (Laptops especially) support the feature. Contact me if you're in this situation. There are solutions, they just aren't here yet; it's a priority thing. Raise your voice.
+
+### Linux, KVM, and VirtualBox
+
+VirtualBox often conflicts with KVM, so try this if the VM refuses to start:
+
+`sudo modprobe -r kvm_amd && sudo modprobe -r kvm`
 
 ## Multicast DNS and why it's important
 
@@ -78,8 +88,26 @@ After a while, you should be able to visit <http://trunk.local>. How long it tak
 
 First click the "Create an Account" button near the bottom of the login screen. Fill it out, click submit and wait for a green confirmation dialog. Go back to <http://trunk.local> and login with the information.
 
+### Installing a Package
+
+One thing you can do is provision a stock nginx. It should forward the ports directly on your router, and be available externally in a secure manner.
+
+To do this, go to the `Packages` panel. Then, you can click the red "x" next to the nginx-example-page package to start the installation process. Give it a port number, which is something you will want to write down for later, and hit OK. Then, wait for the green check to appear. Report any errors you get.
+
+Then, you will want to do this in a console: `curl ipinfo.io` or you can also visit a site like <https://ipchicken.com> to get your external IP address.
+
+**NOTE** if this IP address does not work, first ensure you are not connected through a VPN, or google or apple security proxy in your browser. If in doubt, try the console command above; it will usually be right.
+
+Then, you will want to visit `http://<ip>:<port>` which is the external IP and the port number you gave the package during install. Assuming everything works, you will see the nginx default example page.
+
+Clicking the green check next to the nginx-example-page in the packages panel will uninstall it for you, after a confirmation.
+
+### Other things you can do
+
 There are a number of things in the UI I think would be worth going into, but I kind of want to leave it here and see how well you do from there. If it's hard to use, I'd love to hear about it. Please! I don't want to give you instructions to ensure this feedback is as pure as possible.
 
-Thanks,
+## Sincerest Gratitude
+
+Thanks and Happy Holidays,
 
 Erik Hollensbe <erik@hollensbe.org>
