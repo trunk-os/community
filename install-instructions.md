@@ -84,6 +84,8 @@ These are not package names; you will need to find those for your distribution. 
 
 After a while, you should be able to visit <http://trunk.local>. How long it takes to come up depends on your computer.
 
+The current interface is intended as a way to exercise the system functionality; please do not look at this as a representation of the final product. It's just crossing the t's and dotting the i's.
+
 ### Creating an account
 
 First click the "Create an Account" button near the bottom of the login screen. Fill it out, click submit and wait for a green confirmation dialog. Go back to <http://trunk.local> and login with the information.
