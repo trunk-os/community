@@ -52,7 +52,10 @@ If you have not before, you will need to reboot to BIOS and enable either SVM su
 
 VirtualBox often conflicts with KVM, so try this if the VM refuses to start:
 
-`sudo modprobe -r kvm_amd && sudo modprobe -r kvm`
+- For AMD CPUs:
+    - `sudo modprobe -r kvm_amd && sudo modprobe -r kvm`
+- For Intel CPUs:
+    - `sudo modprobe -r kvm_intel && sudo modprobe -r kvm`
 
 ## Multicast DNS and why it's important
 
