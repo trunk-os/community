@@ -10,7 +10,7 @@ First, install [VirtualBox](https://virtualbox.org) if you have not already. Thi
 
 ## Download the Image
 
-Go [here](https://drive.google.com/file/d/1xw9scBbmD2KpALgtcjAHht8njd3P5LHx/view?usp=drive_link) to download the OVA, which is a full VM application complete with proper disk, network, etc setup.
+Go [here](https://drive.google.com/file/d/1Lq1C59lXSf4DIM3FkcD3gS8gWF7EuSCH/view?usp=sharing) to download the OVA, which is a full VM application complete with proper disk, network, etc setup.
 
 ## Import the Image
 
